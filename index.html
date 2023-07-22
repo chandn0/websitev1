@@ -1,393 +1,545 @@
 <!DOCTYPE HTML>
 <html lang="en">
-	<head>
-		<style>
 
-/* Import fonts */
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500");
+<head>
+	<style>
+		/* Import fonts */
+		@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500");
 
-/* 1. Content elements */
-html {
-	-webkit-text-size-adjust: 100%;
-		-ms-text-size-adjust: 100%;
-}
+		/* 1. Content elements */
+		html {
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+		}
 
-body {
-	font: 15px/1.5 "Roboto Mono", Helvetica, sans-serif;
-	color: #ebebea;
-	background: #222222;
-	margin: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+		body {
+			font: 15px/1.5 "Roboto Mono", Helvetica, sans-serif;
+			color: #ebebea;
+			background: #222222;
+			margin: 0;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
 
-dd, dl, h1, p {
-	margin: 0;
-	padding: 0;
-}
+		dd,
+		dl,
+		h1,
+		p {
+			margin: 0;
+			padding: 0;
+		}
 
-h1, h2 {
-	font-size: inherit;
-	font-weight: 400;
-	margin: 0;
-	line-height: .8;
-}
+		h1,
+		h2 {
+			font-size: inherit;
+			font-weight: 400;
+			margin: 0;
+			line-height: .8;
+		}
 
-a {
-	color: inherit;
-	position: relative;
-	border-bottom: 1px solid #f8f8f6;
-	text-decoration: none;
-}
+		a {
+			color: inherit;
+			position: relative;
+			border-bottom: 1px solid #f8f8f6;
+			text-decoration: none;
+		}
 
-a:hover, a:focus {
-	color: #fccd03;
-	border-bottom: 1px solid #fccd03;
-}
+		a:hover,
+		a:focus {
+			color: #fccd03;
+			border-bottom: 1px solid #fccd03;
+		}
 
-::-moz-focus-inner {
-	padding: 0;
-	border: 0;
-}
+		::-moz-focus-inner {
+			padding: 0;
+			border: 0;
+		}
 
-:focus {
-	outline: 0;
-}
+		:focus {
+			outline: 0;
+		}
 
-.main-text {
-	font: 500 20px/1 "Roboto Mono", Helvetica, sans-serif;
-}
+		.main-text {
+			font: 500 20px/1 "Roboto Mono", Helvetica, sans-serif;
+		}
 
-.main-text-small {
-	font-size: 15px;
-}
+		.main-text-small {
+			font-size: 15px;
+		}
 
-.logo {
-	background: url('https://arweave.net/VLrf5ebKgjOEEJOSi86qE8Sef2pfWbCUq_0Fsuu_gkI') no-repeat;
-	background-position: top left, top left;
-	background-repeat: no-repeat;
-	background-size: auto, auto 100%;
-	width: 42px;
-	height: 50px;
-	padding: 0;
-	margin: 0;
-}
+		.logo {
+			background: url('https://arweave.net/VLrf5ebKgjOEEJOSi86qE8Sef2pfWbCUq_0Fsuu_gkI') no-repeat;
+			background-position: top left, top left;
+			background-repeat: no-repeat;
+			background-size: auto, auto 100%;
+			width: 42px;
+			height: 50px;
+			padding: 0;
+			margin: 0;
+		}
 
-@media (max-width: 600px) {
-	.logo {
-		width: 42px;
-		height: 50px;
-	}
-}
+		@media (max-width: 600px) {
+			.logo {
+				width: 42px;
+				height: 50px;
+			}
+		}
 
-.section {
-	z-index: 1;
-	position: relative;
-	padding: 96px 0 96px 96px;
-	width: calc(100vw - 96px - 7em);
-	display: -webkit-box;
-	display: flex;
-	box-sizing: border-box;
-	min-height: 100vh;
-}
+		.section {
+			z-index: 1;
+			position: relative;
+			padding: 96px 0 96px 96px;
+			width: calc(100vw - 96px - 7em);
+			display: -webkit-box;
+			display: flex;
+			box-sizing: border-box;
+			min-height: 100vh;
+		}
 
-@media (max-width: 1024px) {
-	.section {
-		padding: 48px 0 48px 48px;
-		width: calc(100vw - 48px - 7em);
-	}
-}
+		@media (max-width: 1024px) {
+			.section {
+				padding: 48px 0 48px 48px;
+				width: calc(100vw - 48px - 7em);
+			}
+		}
 
-@media (max-width: 950px) {
-	.section {
-		padding: 7.5vw;
-		width: 100%;
-	}
-}
+		@media (max-width: 950px) {
+			.section {
+				padding: 1vw;
+				width: 100%;
+			}
+		}
 
-@media (max-width: 600px) {
-	.section {
-		display: block;
-		min-height: 0;
-	}
-}
+		@media (max-width: 600px) {
+			.section {
+				display: block;
+				min-height: 0;
+			}
+		}
 
-.column-section {
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	flex-direction: column;
-}
+		.column-section {
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			flex-direction: column;
+		}
 
-@media (max-width: 600px) {
-	.column-section-main {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		flex-direction: column;
-	}
-}
+		@media (max-width: 600px) {
+			.column-section-main {
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				flex-direction: column;
+			}
+		}
 
-.section-bio {
-	-webkit-box-pack: justify;
-	justify-content: space-between;
-}
+		.section-bio {
+			-webkit-box-pack: justify;
+			justify-content: space-between;
+		}
 
-.col-section {
-	width: 100%;
-	max-width: 382px;
-}
+		.col-section {
+			width: 100%;
+			max-width: 382px;
+		}
 
-@media (max-width: 600px) {
-	.col-section {
-		margin-bottom: 15vw;
-	}
-}
+		@media (max-width: 600px) {
+			.col-section {
+				margin-bottom: 10vw;
+			}
+		}
 
-.bio {
-	font-size: 20px;
-	font-weight: 100;
-	margin-bottom: -.45em;
-	max-width: 1000px;
-}
+		.bio {
+			font-size: 20px;
+			font-weight: 100;
+			margin-bottom: -.30em;
+			max-width: 1000px;
+		}
 
-.techstack {
-	font-size: 15px;
-	font-weight: 100;
-	margin-bottom: -.45em;
-	max-width: 1000px;
-}
+		.techstack {
+			font-size: 15px;
+			font-weight: 100;
+			/* margin-bottom: -.30em; */
+			max-width: 1000px;
+		}
 
-@media (max-width: 600px) {
-	.bio {
-		padding-top: 15vw;
-		font-size: 18px;
-	}
-}
+		@media (max-width: 600px) {
+			.bio {
+				padding-top: 10vw;
+				font-size: 18px;
+			}
+		}
 
-.list {
-	margin-top: 3.2em;
-}
+		.list {
+			margin-top: 1em;
+		}
 
-.list-item {
-	margin-top: .25em;
-	margin-bottom: 2em;
-}
+		.list-item {
+			margin-top: .25em;
+			margin-bottom: 1.5em;
+		}
 
-.list-item:last-child {
-	margin-bottom: -.4em;
-}
+		.list-item:last-child {
+			margin-bottom: -.4em;
+		}
 
-.scrunch {
-	z-index: -1;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	pointer-events: none;
-}
+		.scrunch {
+			z-index: -1;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			pointer-events: none;
+		}
 
-.scrunch:after {
-	background: #222222;
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	width: 100%;
-	height: 100%;
-}
+		.scrunch:after {
+			background: #222222;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
 
-.footer {
-	position: fixed;
-	right: 96px;
-	bottom: 92px;
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	flex-direction: column;
-	-webkit-box-align: end;
-	align-items: flex-end;
-}
+		.footer {
+			position: fixed;
+			right: 96px;
+			bottom: 92px;
+			display: -webkit-box;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			flex-direction: column;
+			-webkit-box-align: end;
+			align-items: flex-end;
+		}
 
-.avatar {
-	width: 320px;
-	border-radius: 90px;
-}
+		.avatar {
+			width: 320px;
+			border-radius: 90px;
+		}
 
-@media (max-width: 1024px) {
-	.footer {
-		right: 48px;
-		bottom: 48px;
-	}
-}
+		@media (max-width: 1024px) {
+			.footer {
+				right: 48px;
+				bottom: 48px;
+			}
+		}
 
-@media (max-width: 950px) {
-	.footer {
-		position: relative;
-		right: auto;
-		bottom: auto;
-		padding: 0 7.5vw 7.5vw;
-		-webkit-box-align: start;
-		align-items: flex-start;
-	}
-}
+		@media (max-width: 950px) {
+			.footer {
+				position: relative;
+				right: auto;
+				bottom: auto;
+				padding: 0 7.5vw 7.5vw;
+				-webkit-box-align: start;
+				align-items: flex-start;
+			}
+		}
 
-.footer-links {
-	margin-top: 1em;
-	line-height: 1;
-}
+		.footer-links {
+			margin-top: 1em;
+			line-height: 1;
+		}
 
-@media (max-width: 950px) {
-	.footer-links {
-		display: inline;
-	}
-}
+		@media (max-width: 950px) {
+			.footer-links {
+				display: inline;
+			}
+		}
 
-@media (max-width: 600px) {
-	.avatar {
-		margin-top: 60px;
-	}
-	.avatar-container {
-		display: flex;
-		justify-content: center;
-	}
-}
+		@media (max-width: 600px) {
+			.avatar {
+				margin-top: 60px;
+			}
 
-@media screen and ( max-height: 840px ) {
-	.avatar {
-		display: none;
-	}
-}
+			.avatar-container {
+				display: flex;
+				justify-content: center;
+			}
+		}
 
-@media (hover: hover) {
-	.footer-links:nth-child(odd):hover~.scrunch {
-		background-color: #d9534f;
-	}
+		@media screen and (max-height: 840px) {
+			.avatar {
+				display: none;
+			}
+		}
 
-	.footer-links:nth-child(2n):hover~.scrunch {
-		background-color: #428bca;
-	}
+		@media (hover: hover) {
+			.footer-links:nth-child(odd):hover~.scrunch {
+				background-color: #d9534f;
+			}
 
-	.link-email:hover~.scrunch:after {
-		-webkit-animation: one 1s .25s linear forwards;
+			.footer-links:nth-child(2n):hover~.scrunch {
+				background-color: #428bca;
+			}
+
+			.link-email:hover~.scrunch:after {
+				-webkit-animation: one 1s .25s linear forwards;
 				animation: one 1s .25s linear forwards;
-	}
+			}
 
-	.link-behance:hover~.scrunch:after {
-		-webkit-animation: two 1s .25s linear forwards;
+			.link-behance:hover~.scrunch:after {
+				-webkit-animation: two 1s .25s linear forwards;
 				animation: two 1s .25s linear forwards;
-	}
+			}
 
-	.link-dribbble:hover~.scrunch:after {
-		-webkit-animation: three 1s .25s linear forwards;
+			.link-dribbble:hover~.scrunch:after {
+				-webkit-animation: three 1s .25s linear forwards;
 				animation: three 1s .25s linear forwards;
-	}
+			}
 
-	.link-linkedin:hover~.scrunch:after {
-		-webkit-animation: four 1s .25s linear forwards;
+			.link-linkedin:hover~.scrunch:after {
+				-webkit-animation: four 1s .25s linear forwards;
 				animation: four 1s .25s linear forwards;
-	}
+			}
 
-	.link-twitter:hover~.scrunch:after {
-		-webkit-animation: five 1s .25s linear forwards;
+			.link-twitter:hover~.scrunch:after {
+				-webkit-animation: five 1s .25s linear forwards;
 				animation: five 1s .25s linear forwards;
-	}
+			}
 
-	.link-instagram:hover~.scrunch:after {
-		-webkit-animation: six 1s .25s linear forwards;
+			.link-instagram:hover~.scrunch:after {
+				-webkit-animation: six 1s .25s linear forwards;
 				animation: six 1s .25s linear forwards;
-	}
+			}
 
-	.link-site:hover~.scrunch:after {
-		-webkit-animation: seven 1s .25s linear forwards;
+			.link-site:hover~.scrunch:after {
+				-webkit-animation: seven 1s .25s linear forwards;
 				animation: seven 1s .25s linear forwards;
-	}
-}
-		</style>
-		<title>Chandan</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
-		<link rel="shortcut icon" href="https://mirror-media.imgix.net/publication-images/p7xHaLfkN19YgOmQMM5Qe.png?h=471&w=460">
-	</head>
-	<body>
-		<section class="section column-section section-bio">
-<!-- 		<figure class="logo"></figure> -->
+			}
+		}
+	</style>
+	<title>Chandan</title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1">
+	<link rel="shortcut icon"
+		href="https://mirror-media.imgix.net/publication-images/p7xHaLfkN19YgOmQMM5Qe.png?h=471&w=460">
+</head>
+
+<body>
+	<section class="section column-section section-bio">
+		<!-- 		<figure class="logo"></figure> -->
 		<div class="avatar-container">
-		  <img
-			class="avatar"
-			src="https://mirror-media.imgix.net/publication-images/p7xHaLfkN19YgOmQMM5Qe.png" />
+			<img class="avatar" src="https://mirror-media.imgix.net/publication-images/p7xHaLfkN19YgOmQMM5Qe.png" />
 		</div>
-		<p class="bio">Hi, I'm Chandan, and I specialize in Web3 Dapp Development, Marketing, and Research. I have accumulated nearly 1.5 years of experience working in the blockchain world. Prior to that, I spent over 1 year working at the intersection of Mechanical and Electrical Engineering. My insatiable curiosity has led me to learn about various technologies, including Electric Vehicles, Storage Systems, Web3, AI, Brain-Computer Interfaces, and 3D Printing.<br/><br> Currently, I am fully dedicated to the field of Web3.
-			</p>
-			 <p class="techstack">
-		    Developer Tech Stack : Solidity , Ether.js , Web3.js , Next.js , React.js , HTML , CSS </p>
-		</section>
-		<section class="section column-section-main">
-			<div >
-				<h2 class="main-text">Projects</h2>
-				<dl class="list">
-					<dt class="main-text main-text-small"></dt>
-					<dd class="list-item">
-						<a class="list-link" href="https://web3wiki-v2.vercel.app/" target="_blank">Web3 version of Wikipedia </a>
-					</dd>
-					<dt class="main-text main-text-small"></dt>
-					<dd class="list-item">
-						<a class="list-link" href="https://github.com/chandn0/Ecommerce-Website" target="_blank">Ecommerce website</a>
-					</dd>
-					<dt class="main-text main-text-small"></dt>
+		<p class="bio">Hi, I'm Chandan, and I specialize in Web3 Dapp Development, Marketing, and Research. I have
+			accumulated nearly 1.5 years of experience working in the blockchain world. Prior to that, I spent over 1
+			year working at the intersection of Mechanical and Electrical Engineering. My insatiable curiosity has led
+			me to learn about various technologies, including Electric Vehicles, Storage Systems, Web3, AI,
+			Brain-Computer Interfaces, and 3D Printing.<br /><br> Currently, I am fully dedicated to Web3.
+		</p>
+		<p class="techstack">
+			Developer Tech Stack : Solidity , Ether.js , Web3.js , Next.js , React.js , HTML , CSS </p>
 
-					<dd class="list-item">
-						<a class="list-link" href="https://github.com/chandn0/Fait_crypto_bridge" target="_blank">P2P bridge between fiat and crypto</a>
-					</dd>
-					<br/>
-				</dl>
-		
-				<h2 class="main-text">Articles</h2>
-				<dl class="list">
-					 <dd>
-            <a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/7-mW4UI9noU-OfVmIbpcv_md-PelL8fdqETI6wWoXy4" target="_blank">Comparing the top Smart contract platforms</a>
-        </dd>
-        <br/>
-        <dd>
-            <a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/3FQb497V5eFSTquG1BdUKmCy08-jJzQ__ASdpGs9R2Q" target="_blank">A solution to significant world problems?</a>
-        </dd>
-        <br/>
-        <dd>
-            <a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/cI1E-36miTLgGpFZdZXy2d0WXBy4DcpX-0SnIxXP9I4" target="_blank">Are you a writer looking for a platform where you can own and control your own content?</a>
-        </dd>
-        <br/>
-        <dd>
-            <a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/HFAu37YskQTR-tohvU-prl1fgMRQ_lNOisjqxKBfUDM" target="_blank">6 Reasons why the Ethereum protocol updates take longer.</a>
-        </dd>
-        <br/>
-        <dd>
-            <a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/PmT2iN-SPneV3B_wHHsDnU87C6sRJFpQfwKNSnr2KOA" target="_blank">Rocket pool can make Ethereum decentralized and censorship-resistant</a>
-        </dd>
-        <br/>
-        <dd>
-            <a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/tfRYdecNN69Tg6wbYe0HEYjBxL-HhBv8xwLlGpoCUgA" target="_blank">5 web3 features that web2 companies can adapt to improve their products by 10x</a>
-        </dd>
-        <br/>
-        <dd>
-            <a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/aJfdUUHGM93KDcKjPqwO_x85UI0sYrTrODMM1FbZPcM" target="_blank">The new Governments emerging from Web3</a>
-        </dd>
-        <br/>
-        <dd>
-            <a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/NqGNubwfU97SeJMzphk0fF76xy43OkKo5gI3N9Om1YY" target="_blank">How to make decentralized apps (Dapps) more user-friendly</a>
-        </dd>
-				</dl>
-			</div>
-			
-		</section>
+	</section>
+	<section class="section column-section-main">
+		<div>
+			<h2 class="main-text">Work Experience</h2>
+			<dl class="list">
+				<dd class="list-item">
+					<a class="list-link" href="https://www.buildbear.io/" target="_blank">BuildBear</a><br>
+					Content Writer: Web3 Project Tutorials
+				</dd>
+				<dd class="list-item">
+					<a class="list-link" href="https://www.appavengers.co/" target="_blank">Appavengers</a>--3 Months
+					<br>
+					Blockchain Developer: Development of smart contracts, Integration of frontend and blockchain
+				</dd>
+				<dd class="list-item">
+					<a class="list-link"
+						href="https://opensea.io/assets/matic/0x931204fb8cea7f7068995dce924f0d76d571df99/134"
+						target="_blank">Vagobond Magazine 9</a>
+					<br>
+					Content Writer: Written article about Crypto Wallet Safety
+				</dd>
+				<dd class="list-item">
 
-		<footer class="footer main-text main-text-small">
-			<a class="footer-links link-twitter" href="https://twitter.com/chandan1_" target="_blank">twitter</a>
-			<a class="footer-links link-facebook" target="_blank" href="https://lenster.xyz/u/0xchandan.lens">lens</a>
-			<a class="footer-links link-behance" target="_blank" href="https://github.com/chandn0">github</a>
-			<a class="footer-links link-behance" target="_blank" href="https://medium.com/@0chandan">Medium</a>
-			<a class="footer-links link-behance" target="_blank" href="https://mirror.xyz/iamchandan.eth">Mirror</a>
-			<a class="footer-links link-behance" target="_blank" href="https://www.linkedin.com/in/chandan-boinapally-57a5a5215">Linkedin</a>
-		</footer>
-	</body>
+					<a class="list-link" href="http://tiar.io" target="_blank">Tiar</a>-- 3 Months<br>
+					Community Builder:Hosted Twitter spaces to increase project awareness.
+				</dd>
+				<dd class="list-item">
+					<a class="list-link" href="https://retronev.in/" target="_blank">Retron EV</a>-- 3 Months<br>
+					Design Engineer:Lithium-ion battery design and manufacturing processes.
+				</dd>
+				<br>
+
+			</dl>
+			<hr>
+			<br />
+			<h2 class="main-text">Projects</h2>
+			<dl class="list">
+				<dd class="list-item">
+					<a class="list-link" href="https://web3wiki-v2.vercel.app/" target="_blank">Web3 version of
+						Wikipedia </a>
+				</dd>
+				<dd class="list-item">
+					<a class="list-link" href="https://github.com/chandn0/Ecommerce-Website" target="_blank">Ecommerce
+						website</a>
+				</dd>
+				<dd class="list-item">
+					<a class="list-link" href="https://github.com/chandn0/Fait_crypto_bridge" target="_blank">P2P bridge
+						between fiat and crypto</a>
+				</dd>
+				<dd class="list-item">
+					<a class="list-link" href="https://github.com/BuildBearLabs/Tutorials/tree/main/ERC-6551"
+						target="_blank"> Token Bound Accounts(TBA) using ERC-6551</a>
+				</dd>
+				<dd class="list-item">
+					<a class="list-link" href="https://github.com/BuildBearLabs/Tutorials/tree/main/Voting"
+						target="_blank">Voting Smart Contract </a>
+				</dd>
+				<dd class="list-item">
+					<a class="list-link" href="https://github.com/BuildBearLabs/Tutorials/tree/main/NFTMarketplace"
+						target="_blank"> NFT Marketplace</a>
+				</dd>
+				<dd class="list-item">
+					<a class="list-link" href="https://github.com/BuildBearLabs/Tutorials/tree/main/Ai-mint"
+						target="_blank"> AI Mint</a>
+				</dd>
+
+				<dd class="list-item">
+					<a class="list-link" href="https://github.com/BuildBearLabs/Tutorials/tree/main/RentableNFTs"
+						target="_blank">Rentable NFTs</a>
+				</dd>
+
+			</dl>
+			<br />
+			<hr>
+			<br />
+			<h2 class="main-text">Articles</h2>
+			<dl class="list">
+				<dd>
+					<a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/7-mW4UI9noU-OfVmIbpcv_md-PelL8fdqETI6wWoXy4"
+						target="_blank">Comparing the top Smart contract platforms</a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/3FQb497V5eFSTquG1BdUKmCy08-jJzQ__ASdpGs9R2Q"
+						target="_blank">A solution to significant world problems?</a>
+				</dd>
+
+				<br />
+				<dd>
+					<a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/HFAu37YskQTR-tohvU-prl1fgMRQ_lNOisjqxKBfUDM"
+						target="_blank">6 Reasons why the Ethereum protocol updates take longer.</a>
+				</dd>
+
+
+				<br />
+				<dd>
+					<a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/aJfdUUHGM93KDcKjPqwO_x85UI0sYrTrODMM1FbZPcM"
+						target="_blank">The new Governments emerging from Web3</a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/NqGNubwfU97SeJMzphk0fF76xy43OkKo5gI3N9Om1YY"
+						target="_blank">How to make decentralized apps (Dapps) more user-friendly</a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/tfRYdecNN69Tg6wbYe0HEYjBxL-HhBv8xwLlGpoCUgA"
+						target="_blank">5 web3 features that web2 companies can adapt to improve their products by
+						10x</a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/PmT2iN-SPneV3B_wHHsDnU87C6sRJFpQfwKNSnr2KOA"
+						target="_blank">Rocket pool can make Ethereum decentralized and censorship-resistant</a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://mirror.xyz/0x50c88219BfE7A1D9Cba74C4c702E30AfCa24679c/cI1E-36miTLgGpFZdZXy2d0WXBy4DcpX-0SnIxXP9I4"
+						target="_blank">Are you a writer looking for a platform where you can own and control your own
+						content?</a>
+				</dd>
+			</dl>
+			<br />
+			<hr>
+			<br />
+			<h2 class="main-text">Tutorial Articles</h2>
+			<dl class="list">
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/Building_an_NFT_Lottery"
+						target="_blank">Building an NFT Lottery</a>
+				</dd>
+				<br />
+
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/Learn_and_deploy_an_ERC_1155_smart_contract"
+						target="_blank">ERC 1155 smart contract </a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/Learn_how_to_execute_flash_loan_Aave_v3_Simulate_on_Mainnet"
+						target="_blank">flash loan | Aave v3</a>
+				</dd>
+				<br />
+
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/Build_your_own_Decentralized_Exchange"
+						target="_blank">Guide to Building Decentralized Exchange</a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/Building_a_Decentralized_NFT_Marketplace"
+						target="_blank">Building a Decentralized NFT Marketplace</a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/Rentable_NFTs"
+						target="_blank">Create Rentable NFTs Using ERC-4907 Standard</a>
+				</dd>
+
+				<br />
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/TokenBound_accounts"
+						target="_blank">Creating Token Bound Accounts(TBA) Using ERC-6551</a>
+				</dd>
+
+				<br />
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/Build_Your_Own_Decentralized_Lending_Protocol"
+						target="_blank">Guide to Building Decentralized Lending Protocol</a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/Generate_NFT_with_AI_and_Deploy_the_NFT_smart_contract"
+						target="_blank">Generate NFT with AI and Deploy the NFT smart contract</a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/A_Step-by-Step_Guide_to_Building_and_Deploying_a_Voting_Smart_Contract_on_the_Blockchain"
+						target="_blank">Building and Deploying a Voting Smart Contract on the Blockchain</a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/Downcasting_Vulnerability"
+						target="_blank">Integer Downcasting Vulnerability: Demonstration and Effective Fix</a>
+				</dd>
+				<br />
+				<dd>
+					<a href="https://www.buildbear.io/resources/guides-and-tutorials/Flashloan_Arbitrage_BoT"
+						target="_blank">A Comprehensive Step-by-Step Guide for Building a Flashloan Arbitrage Bot</a>
+				</dd>
+
+			</dl>
+		</div>
+
+	</section>
+
+	<footer class="footer main-text main-text-small">
+		<a class="footer-links link-facebook" target="_blank" href="https://lenster.xyz/u/0xchandan.lens">lens</a>
+		<a class="footer-links link-behance" target="_blank" href="https://github.com/chandn0">Github</a>
+		<a class="footer-links link-behance" target="_blank" href="https://medium.com/@0chandan">Medium</a>
+		<a class="footer-links link-behance" target="_blank" href="https://mirror.xyz/iamchandan.eth">Mirror</a>
+		<a class="footer-links link-behance" target="_blank"
+			href="https://www.linkedin.com/in/chandan-boinapally-57a5a5215">Linkedin</a>
+		<a class="footer-links link-twitter" href="https://twitter.com/chandan1_" target="_blank">Twitter</a>
+
+	</footer>
+</body>
+
 </html>
