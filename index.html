@@ -221,6 +221,20 @@
 			align-items: flex-end;
 		}
 
+		.quote {
+			position: fixed;
+			right: 96px;
+			bottom: 300px;
+			max-width: 275px;
+			display: -webkit-box;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			flex-direction: column;
+			-webkit-box-align: end;
+			align-items: flex-end;
+		}
+
 		.avatar {
 			width: 320px;
 			border-radius: 90px;
@@ -230,6 +244,18 @@
 			.footer {
 				right: 48px;
 				bottom: 48px;
+			}
+
+		}
+
+		@media(max-width: 1500px) {
+			.quote {
+				position: relative;
+				right: auto;
+				bottom: auto;
+				padding: 0 7.5vw 7.5vw;
+				-webkit-box-align: start;
+				align-items: flex-start;
 			}
 		}
 
@@ -553,6 +579,9 @@
 		<a class="footer-links link-twitter" href="https://twitter.com/chandan1_" target="_blank">Twitter</a>
 
 	</footer>
+	<quote class="quote">
+		In this limited time on Earth, we are destined to be forgotten. Live life on your terms, not dictated by others.
+	</quote>
 </body>
 
 </html>
